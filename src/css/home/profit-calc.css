@@ -1,0 +1,116 @@
+
+.profit-calc-numbers-container {
+    display: inline-block;
+    margin: 0 auto;
+    width: max-content;
+    margin: 10px 0 30px 0;
+  }
+  .profit-calc-number-container {
+    float: left;
+    height: 120px;
+    position: relative;
+    width: 80px;
+    background: linear-gradient(179.57deg, #000000 2%, #1A1A1A 99.12%);
+    border-radius: 10px;
+    margin: 0 5px;
+  }
+  .profit-calc-container {
+    display: inline-grid;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+  }
+  .profit-calc-number-top {
+    position: absolute;
+    left: 3.33%;
+    right: 3.33%;
+    top: 3.4%;
+    bottom: 51.22%;
+    background: linear-gradient(180deg, #1A1A1A 0.11%, #333333 99.68%);
+    z-index: 2;
+  }
+  .profit-calc-number-bottom {
+    position: absolute;
+    left: 3.33%;
+    right: 3.33%;
+    top: 51.44%;
+    bottom: 3.54%;
+    background: linear-gradient(180deg, #333333 1.4%, #1A1A1A 100.52%);
+    z-index: 2;
+  }
+  .profit-calc-number-container > p {
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 95px;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100px;
+    z-index: 3;
+  }
+  .profit-calc-number-separator {
+    position: absolute;
+    left: 5.83%;
+    right: 5.83%;
+    top: 48.78%;
+    bottom: 48.56%;
+    background: #000000;
+    z-index: 4;
+  }
+  .profit-calc-container > p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 32px;
+    text-align: center;
+    color: #2D4379;
+    margin: 15px 0;
+    width: 61%;
+  }
+  
+.profit-calc-number-border {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    border-image: linear-gradient(179.57deg, #000 2%, #1A1A1A 99.12%);
+    border: 3px solid black;
+    border-radius: 10px;
+    z-index: 4;
+  }
+  .profit-calc-number-border-top {
+    position: absolute;
+    left: 3.33%;
+    right: 3.33%;
+    top: 2.22%;
+    bottom: 90.33%;
+    background: linear-gradient(180deg, #939598 0.25%, #414042 13.38%);
+  }
+  .profit-calc-number-border-bottom {
+    position: absolute;
+    left: 3.33%;
+    right: 3.33%;
+    top: 90.33%;
+    bottom: 2.22%;
+    background: linear-gradient(0deg, #6D6E71 0.28%, #414042 13.39%);
+  }
+  .profit-calc-number-hinge-right {
+    position: absolute;
+    left: 95.83%;
+    right: 2.5%;
+    top: 43.33%;
+    bottom: 43.33%;
+    background: linear-gradient(179.98deg, #FDFDFE 0.53%, #EBEAEB 4.09%, #BBB9BA 14.58%, #908D8D 25.59%, #6C6968 36.94%, #4F4B4A 48.72%, #393333 61.06%, #292322 74.2%, #1F1918 88.71%, #1C1615 107.26%);
+    z-index: 5;
+  }
+  .profit-calc-number-hinge-left {
+    position: absolute;
+    left: 2.5%;
+    right: 95.83%;
+    top: 43.33%;
+    bottom: 43.33%;
+    background: linear-gradient(179.98deg, #FDFDFE 0.53%, #EBEAEB 4.09%, #BBB9BA 14.58%, #908D8D 25.59%, #6C6968 36.94%, #4F4B4A 48.72%, #393333 61.06%, #292322 74.2%, #1F1918 88.71%, #1C1615 107.26%);
+    z-index: 5;
+  }

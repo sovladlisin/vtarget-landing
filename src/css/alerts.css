@@ -1,0 +1,31 @@
+
+.alerts-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: max-content;
+  width: max-content;
+  z-index: 100;
+  margin: 20px;
+}
+.alert {
+  padding: 20px;
+  margin: 10px;
+  background: white;
+  border-radius: 10px;
+  font-size: 9pt;
+  display: grid;
+  grid-template-columns: 30px auto;
+  gap: 10px;
+  box-shadow: 0 1px 2px #13193659;
+}
+.alert span {
+  font-size: 9pt;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+.alert p {
+  height: 20px;
+  line-height: 20px;
+}

@@ -1,0 +1,52 @@
+
+.page-container {
+    width: 1440px;
+    margin: 0 auto;
+  }
+  .header-container {
+    height: 50px;
+    margin: 20px auto;
+    display: grid;
+    width: inherit;
+    grid-template-columns: 1fr 4fr 1fr;
+  }
+  .header-logo > img {
+    height: 30px;
+    object-fit: contain;
+  }
+  .header-logo {
+    height: 30px;
+    width: max-content;
+    float: left;
+    margin: 10px 0;
+  }
+  .header-page-buttons {
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    height: 30px;
+    margin: 10px auto 10px 0;
+    gap: 87px;
+  }
+  .header-page-buttons > button {
+    font-size: 14px;
+    line-height: 30px;
+    color: #B3B7C1;
+  }
+  .header-contact-button-container {
+    height: 40px;
+    border: 2px solid #386BEE;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: 40px auto;
+    justify-items: center;
+    gap: 0;
+    justify-content: center;
+    color: #386BEE;
+  }
+  .header-contact-button-container > p {
+    font-size: 14pt;
+    line-height: 40px;
+  }
+  .header-contact-button-container > span {
+    line-height: 40px;
+  }

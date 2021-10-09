@@ -1,0 +1,63 @@
+
+.vtargete-pay-container {
+  width: 1285px;
+  height: 432px;
+  background: #F4F7FF;
+  border-radius: 48px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  justify-items: center;
+}
+.vtargete-pay-image-container > img {
+  height: 432px;
+}
+.vtargete-pay-container h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 52px;
+  color: #16181B;
+}
+.vtargete-pay-container h1 > a {
+  color: #386BEE;
+  text-decoration: underline;
+}
+.vtargete-pay-container p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 32px;
+  color: #2D4379;
+  margin: 20px 0;
+}
+.vtargete-pay-container div {
+  width: 85%;
+  margin: auto 0;
+}
+.vtargete-pay-container button {
+  width: 395px;
+  height: 54px;
+  background: #386BEE;
+  box-shadow: 0px 8px 16px rgba(56, 107, 238, 0.25);
+  border-radius: 75px;
+  display: grid;
+  grid-template-columns: auto 55px;
+  justify-content: center;
+  justify-items: center;
+}
+.vtargete-pay-container button > p {
+  line-height: 55px;
+  color: white;
+  float: left;
+  height: 55px;
+  margin: 0;
+  font-size: 16px;
+}
+.vtargete-pay-container button > i {
+  height: 55px;
+  width: 55px;
+  line-height: 55px;
+  color: white;
+}
