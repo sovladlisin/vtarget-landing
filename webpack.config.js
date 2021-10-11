@@ -1,11 +1,11 @@
 const path = require('path');
-// const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
     entry: "./index.tsx",
     output: {
         filename: "index.js",
-        path: path.resolve(__dirname, ''), // change this,
-        publicPath: '/',
+        path: path.resolve(__dirname, './build/'), // change this,
+        publicPath: './',
     },
     module: {
         rules: [
@@ -40,9 +40,11 @@ module.exports = {
     resolve: {
         extensions: [".ts", ".tsx", ".js"]
     },
-    // plugins: [
-    //     new HtmlWebpackPlugin()
-    // ],
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './index.html'
+        })
+    ],
 
     // externals: {
     //     moment: 'moment'

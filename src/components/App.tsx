@@ -11,11 +11,7 @@ const App: React.FC = () => {
         <>
             <FaviconContainer />
             <Alert />
-            <Router>
-                <Switch>
-                    <Route exact path="/" component={Home} />
-                </Switch>
-            </Router>
+            <Home />
         </>
     )
 }
