@@ -35,7 +35,7 @@ const SubscriptionPlans: React.FunctionComponent<ISubscriptionPlansProps> = (pro
                 <div className={'sub-info-price-log-container' + mobileClass}>
                     <div className={'sub-info-price-container' + mobileClass}>
                         <div className={'sub-info-price-amount-container' + mobileClass}>
-                            <p>0P</p>
+                            <p>0₽</p>
                             <span>/ месяц</span>
                         </div>
                         <p>Бесплатный тариф</p>
@@ -58,7 +58,7 @@ const SubscriptionPlans: React.FunctionComponent<ISubscriptionPlansProps> = (pro
                 <div className={'sub-info-price-log-container' + mobileClass}>
                     <div className={'sub-info-price-container' + mobileClass}>
                         <div className={'sub-info-price-amount-container' + mobileClass}>
-                            <p>2000 P</p>
+                            <p>2000₽</p>
                             <span>/ месяц</span>
                         </div>
                         <p>Безлимит</p>
