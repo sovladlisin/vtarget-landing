@@ -1,6 +1,6 @@
 
 .streams-container {
-    width: 1200px;
+    max-width: 1200px;
     margin: 20px auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
