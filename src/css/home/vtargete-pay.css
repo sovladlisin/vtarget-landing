@@ -36,7 +36,7 @@
   width: 85%;
   margin: auto 0;
 }
-.vtargete-pay-container button {
+.vtargete-pay-container > div > a {
   width: 395px;
   height: 54px;
   background: #386BEE;
@@ -47,7 +47,7 @@
   justify-content: center;
   justify-items: center;
 }
-.vtargete-pay-container button > p {
+.vtargete-pay-container > div > a > p {
   line-height: 55px;
   color: white;
   float: left;
@@ -55,9 +55,10 @@
   margin: 0;
   font-size: 16px;
 }
-.vtargete-pay-container button > i {
+.vtargete-pay-container > div > a > i {
   height: 55px;
   width: 55px;
   line-height: 55px;
   color: white;
+  text-align: center;
 }

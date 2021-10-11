@@ -94,7 +94,7 @@ const Home: React.FC = (props: IAppProps) => {
             <h2 className={'home-h2' + mobileClass}>Кейсы пользователей</h2>
             <UseCases />
 
-            <h2 className={'home-h2' + mobileClass}>Прямые эфиры <a>"Втаргете для блондинок"</a></h2>
+            <h2 className={'home-h2' + mobileClass}>Прямые эфиры <a target='_blank' rel="noopener noreferrer" href={'https://vk.com/videos-182472456?section=album_2'}>"Втаргете для блондинок"</a></h2>
             <StreamArchive />
 
             <h2 className={'home-h2' + mobileClass}>Выберите свой тариф</h2>

@@ -17,7 +17,7 @@ const VtargetePayContainer: React.FunctionComponent<IVtargetePayContainerProps> 
                     Удобное и выгодное пополнение <a>рекламных</a> кабинетов
                 </h1>
                 <p>Пополняй баланс в кабинете в пару кликов и получай бонусы, статистику кампаний и объявлений, профессиональные инструменты для таргетолога</p>
-                <button><p>Перейти в сервис пополнения</p><i className='fas fa-plus'></i></button>
+                <a target='_blank' rel="noopener noreferrer" href='https://vtargete.pro'><p>Перейти в сервис пополнения</p><i className='fas fa-arrow-right'></i></a>
             </div>
             <div className={'vtargete-pay-image-container' + mobileClass}>
                 <img src={Guy}></img>
