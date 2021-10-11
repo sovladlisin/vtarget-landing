@@ -1,0 +1,41 @@
+
+.use-case-container {
+    width: 1200px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+  .use-case-block {
+    background: rgba(244, 247, 255, 0.5);
+    border-radius: 10px;
+    padding: 35px;
+  }
+  .use-case-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 29px;
+    color: #16181B;
+    height: 110px;
+    white-space: pre-line;
+  }
+  .use-case-block > a > p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    color: #386BEE;
+    float: left;
+    margin-left: 5px;
+  }
+  .use-case-block > a {
+    display: inline-block;
+  }
+  .use-case-block > a > span {
+    float: left;
+    height: 30px;
+    width: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }

@@ -1,0 +1,37 @@
+
+.streams-container {
+    width: 1200px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+  .stream-block {
+    border: 2px solid #386BEE;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 35px;
+  }
+  .stream-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 29px;
+    color: #16181B;
+    height: 110px;
+  }
+  .stream-block > a {
+    color: #386BEE;
+    display: inline-block;
+    height: 20px;
+  }
+  .stream-block > a > p {
+    width: max-content;
+    line-height: 20px;
+    float: left;
+  }
+  .stream-block > a > i {
+    line-height: 22px;
+    font-size: 15px;
+    margin-left: 10px;
+  }

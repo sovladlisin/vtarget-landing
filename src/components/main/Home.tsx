@@ -44,10 +44,24 @@ const Home: React.FC = (props: IAppProps) => {
 
     const mobileClass = isMobile ? ' mobile' : ''
 
+    const scrollRef1 = React.useRef(null)
+    const scrollRef2 = React.useRef(null)
+    const scrollRef3 = React.useRef(null)
+    const scrollRef4 = React.useRef(null)
+    const scroll1 = () => scrollRef1.current.scrollIntoView({ behavior: 'smooth' })
+    const scroll2 = () => scrollRef2.current.scrollIntoView({ behavior: 'smooth' })
+    const scroll3 = () => scrollRef3.current.scrollIntoView({ behavior: 'smooth' })
+    const scroll4 = () => scrollRef4.current.scrollIntoView({ behavior: 'smooth' })
+
 
     return <>
         <div className={'page-container' + mobileClass}>
-            <Header />
+            <Header
+                onScroll1={scroll1}
+                onScroll2={scroll2}
+                onScroll3={scroll3}
+                onScroll4={scroll4}
+            />
             <TitleCard />
 
             <h2 className={'home-h2' + mobileClass}>Таргетолог без автоматизации таргета:</h2>
@@ -62,17 +76,21 @@ const Home: React.FC = (props: IAppProps) => {
             <h2 className={'home-h2' + mobileClass}>Преимущества сервиса <a>Втаргете:</a></h2>
             <BenefitDesc />
 
+            <span ref={scrollRef4}></span>
             <VtargetePayContainer />
 
+            <span ref={scrollRef1}></span>
             <h2 className={'home-h2' + mobileClass}>Все <a>возможности</a> сервиса Втаргете</h2>
             <FunctionList />
 
+            <span ref={scrollRef2}></span>
             <h2 className={'home-h2' + mobileClass}>Отзывы о Втаргете</h2>
             <ReviewGallery />
 
             <h2 className={'home-h2' + mobileClass}>Ответы на часто задаваемые вопросы</h2>
             <FAQ />
 
+            <span ref={scrollRef3}></span>
             <h2 className={'home-h2' + mobileClass}>Кейсы пользователей</h2>
             <UseCases />
 

@@ -1,79 +1,99 @@
 
 .sub-info-container {
-    width: 1200px;
-    margin: 30px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-  }
-  .sub-info-free {
-    border: 1px solid #B3B7C1;
-    box-sizing: border-box;
-    border-radius: 20px;
-    padding: 30px;
-  }
-  .sub-info-pay {
-    background: linear-gradient(45deg, #386BEE 0%, #1655F4 50%);
-    border: 1px solid #DDDDDD;
-    box-sizing: border-box;
-    border-radius: 20px;
-    padding: 30px;
-    color: white;
-  }
-  .sub-info-price-log-container {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    border-bottom: 1px solid gainsboro;
-    padding-bottom: 30px;
-  }
-  .sub-info-price-amount-container > p {
-    font-weight: bold;
-    font-size: 44px;
-    line-height: 60px;
-    color: #16181B;
-    float: left;
-    height: 60px;
-  }
-  .sub-info-price-amount-container {
-    display: inline-block;
-  }
-  .sub-info-price-amount-container > span {
-    float: left;
-    height: 60px;
-    line-height: 80px;
-    color: #b3b7c1;
-    font-size: 13px;
-  }
-  sub-info-price-container > button {
-    border: 2px solid #386BEE;
-    box-sizing: border-box;
-    border-radius: 75px;
-  }
-  .sub-info-price-log-container > button {
-    border: 2px solid #386BEE;
-    box-sizing: border-box;
-    border-radius: 75px;
-    height: 54px;
-    color: #386BEE;
-    width: 180px;
-  }
-  .sub-info-price-container > p {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 27px;
-    color: #16181B;
-  }
-  .sub-info-line {
-    display: grid;
-    grid-template-columns: 30px auto;
-    margin: 15px auto;
-  }
-  .sub-info-line-includes p {
-    color: gainsboro;
-  }
-  .sub-info-line.sub-info-line-includes > span {
-    color: #2D4379;
-  }
-  .sub-info-line-includes {
-    color: #2D4379 !important;
-  }
+  width: 1200px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.sub-info-free {
+  border: 1px solid #B3B7C1;
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 30px;
+}
+.sub-info-pay {
+  background: linear-gradient(45deg, #386BEE 0%, #1655F4 50%);
+  border: 1px solid #DDDDDD;
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 30px;
+  color: white;
+}
+.sub-info-price-log-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  border-bottom: 1px solid gainsboro;
+  padding-bottom: 30px;
+}
+.sub-info-price-amount-container > p {
+  font-weight: bold;
+  font-size: 44px;
+  line-height: 60px;
+  color: #16181B;
+  float: left;
+  height: 60px;
+}
+.sub-info-price-amount-container {
+  display: inline-block;
+}
+.sub-info-price-amount-container > span {
+  float: left;
+  height: 60px;
+  line-height: 80px;
+  color: #b3b7c1;
+  font-size: 13px;
+}
+sub-info-price-container > button {
+  border: 2px solid #386BEE;
+  box-sizing: border-box;
+  border-radius: 75px;
+}
+.sub-info-price-log-container > button {
+  border: 2px solid #386BEE;
+  box-sizing: border-box;
+  border-radius: 75px;
+  height: 54px;
+  color: #386BEE;
+  width: 180px;
+}
+.sub-info-price-container > p {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #16181B;
+}
+.sub-info-line {
+  display: grid;
+  grid-template-columns: 30px auto;
+  margin: 15px auto;
+}
+.sub-info-line p {
+  color: gainsboro;
+  line-height: 20px;
+}
+
+.sub-info-line-includes > p {
+  color: #2D4379 !important;
+}
+
+.sub-info-line-includes > span {
+  color: #386BEE !important;
+}
+.sub-info-line > span {
+  color: gainsboro;
+  line-height: 22px;
+}
+.sub-info-pay .sub-info-price-amount-container > p {
+  color: white;
+}
+.sub-info-pay p {
+  color: white !important;
+}
+.sub-info-pay span {
+  color: white !important;
+}
+.sub-info-pay button {
+  color: white !important;
+  border-color: white !important;
+}

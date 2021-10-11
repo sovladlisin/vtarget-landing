@@ -1,0 +1,43 @@
+
+
+.review-gallery-image-container > img {
+  height: 425px;
+  box-shadow: 0px 0px 30px 2px gainsboro;
+  border-radius: 10px;
+}
+.review-gallery-image-container {
+  width: max-content;
+  margin: 0 auto;
+}
+.review-gallery-nav-panel {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: center;
+  width: max-content;
+  margin: 40px auto;
+  gap: 50px;
+}
+.review-gallery-dots {
+  display: inline-block;
+}
+.review-gallery-dots > span {
+  font-size: 8pt;
+  color: gainsboro;
+  cursor: pointer;
+  margin: auto 10px;
+  line-height: 55px;
+}
+.review-gallery-buttons > button {
+  background: #386BEE;
+  box-shadow: 0px 8px 16px rgba(56, 107, 238, 0.25);
+  height: 55px;
+  width: 55px;
+  color: white;
+  border-radius: 55px;
+  font-size: 22px;
+}
+.review-gallery-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}

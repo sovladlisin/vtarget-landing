@@ -4,6 +4,10 @@ import Logo from '../../../images/logo.png'
 import '../../../css/home/header.css'
 
 interface IHeaderProps {
+    onScroll1: () => void
+    onScroll2: () => void
+    onScroll3: () => void
+    onScroll4: () => void
 }
 
 const Header: React.FunctionComponent<IHeaderProps> = (props) => {
@@ -15,10 +19,10 @@ const Header: React.FunctionComponent<IHeaderProps> = (props) => {
         <div className={'header-container' + mobileClass}>
             <div className={'header-logo' + mobileClass}><img src={Logo}></img></div>
             <div className={'header-page-buttons' + mobileClass}>
-                <button>Возможности</button>
-                <button>Отзывы</button>
-                <button>Кейсы</button>
-                <button>Выгодное пополнение</button>
+                <button onClick={props.onScroll1}>Возможности</button>
+                <button onClick={props.onScroll2}>Отзывы</button>
+                <button onClick={props.onScroll3}>Кейсы</button>
+                <button onClick={props.onScroll4}>Выгодное пополнение</button>
             </div>
             <div className={'header-contact-button-container' + mobileClass}>
                 <span><i className='fas fa-phone-alt'></i></span>
