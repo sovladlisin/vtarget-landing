@@ -11,4 +11,4 @@ In the project directory, you can run:
 
 Запуск проекта - аналог serve -s build - смотрит и перекомпилирует измененные файлы
 
-<!-- DEMO - https://vtargete-landing.herokuapp.com/ -->
+DEMO - https://vtargete-landing.herokuapp.com/
