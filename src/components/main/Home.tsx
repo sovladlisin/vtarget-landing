@@ -22,6 +22,7 @@ import StreamArchive from './HomeComponents/StreamArchive';
 import SubscriptionPlans from './HomeComponents/SubscriptionPlans';
 import VtargetePayContainer from './HomeComponents/VtargetePayContainer';
 import Footer from './HomeComponents/Footer';
+import LoginPopup from '../auth/LoginPopup';
 
 export interface IAppProps {
 }
@@ -48,11 +49,27 @@ const Home: React.FC = (props: IAppProps) => {
     const scrollRef2 = React.useRef(null)
     const scrollRef3 = React.useRef(null)
     const scrollRef4 = React.useRef(null)
+    const scrollRef5 = React.useRef(null)
     const scroll1 = () => scrollRef1.current.scrollIntoView({ behavior: 'smooth' })
     const scroll2 = () => scrollRef2.current.scrollIntoView({ behavior: 'smooth' })
     const scroll3 = () => scrollRef3.current.scrollIntoView({ behavior: 'smooth' })
     const scroll4 = () => scrollRef4.current.scrollIntoView({ behavior: 'smooth' })
+    const scroll5 = () => scrollRef5.current.scrollIntoView({ behavior: 'smooth' })
 
+    const [loginPopupWindow, setLoginPopupWindow] = useState(false)
+
+    React.useEffect(() => {
+        const objRef = document.body
+
+        if (loginPopupWindow) {
+            objRef.style.overflow = "hidden";
+            objRef.style.height = "100%";
+        }
+        else {
+            objRef.style.overflow = "unset";
+            objRef.style.height = "unset";
+        }
+    }, [, loginPopupWindow])
 
     return <>
         <div className={'page-container' + mobileClass}>
@@ -62,8 +79,12 @@ const Home: React.FC = (props: IAppProps) => {
                 onScroll3={scroll3}
                 onScroll4={scroll4}
             />
-            <TitleCard />
+            <TitleCard
+                onMoreClick={scroll5}
+                onLoginClick={() => setLoginPopupWindow(true)}
+            />
 
+            <span ref={scrollRef5}></span>
             <h2 className={'home-h2' + mobileClass}>Таргетолог без автоматизации таргета:</h2>
             <BenefitCards />
 
@@ -98,12 +119,15 @@ const Home: React.FC = (props: IAppProps) => {
             <StreamArchive />
 
             <h2 className={'home-h2' + mobileClass}>Выберите свой тариф</h2>
-            <SubscriptionPlans />
+            <SubscriptionPlans
+                onLoginClick={() => setLoginPopupWindow(true)}
+            />
 
         </div>
 
         <Footer />
 
+        {loginPopupWindow && <LoginPopup onClose={() => setLoginPopupWindow(false)} />}
     </>
 }
 

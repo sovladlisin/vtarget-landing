@@ -3,7 +3,12 @@ import { isMobile } from 'react-device-detect';
 import Guy from '../../../images/guy-titlecard.png'
 import '../../../css/home/titlecard.css'
 
+
+
+
 interface ITitleCardProps {
+    onMoreClick: () => void,
+    onLoginClick: () => void
 }
 
 const TitleCard: React.FunctionComponent<ITitleCardProps> = (props) => {
@@ -20,8 +25,8 @@ const TitleCard: React.FunctionComponent<ITitleCardProps> = (props) => {
                 </h3>
 
                 <div className={'titlecard-info-buttons-container' + mobileClass}>
-                    <button className={'titlecard-info-button-start' + mobileClass}><p>Начать работу</p><i className='fas fa-arrow-right'></i></button>
-                    <button className={'titlecard-info-button-login' + mobileClass}>Войти в аккаунт</button>
+                    <button onClick={props.onLoginClick} className={'titlecard-info-button-start' + mobileClass}><p>Начать работу</p><i className='fas fa-arrow-right'></i></button>
+                    <button onClick={props.onMoreClick} className={'titlecard-info-button-login' + mobileClass}>Подробнее</button>
                 </div>
             </div>
             <div className={'titlecard-image-container' + mobileClass}>

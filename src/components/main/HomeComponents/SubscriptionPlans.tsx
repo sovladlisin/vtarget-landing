@@ -4,6 +4,7 @@ import { isMobile } from 'react-device-detect';
 import '../../../css/home/subscription.css'
 
 interface ISubscriptionPlansProps {
+    onLoginClick: () => void
 }
 
 const SubscriptionPlans: React.FunctionComponent<ISubscriptionPlansProps> = (props) => {
@@ -40,7 +41,7 @@ const SubscriptionPlans: React.FunctionComponent<ISubscriptionPlansProps> = (pro
                         </div>
                         <p>Бесплатный тариф</p>
                     </div>
-                    <button>Войти</button>
+                    <button onClick={props.onLoginClick}>Войти</button>
                 </div>
                 <div className={'sub-info-points-container' + mobileClass}>
                     {sub_pluses.map(s => {
@@ -63,7 +64,7 @@ const SubscriptionPlans: React.FunctionComponent<ISubscriptionPlansProps> = (pro
                         </div>
                         <p>Безлимит</p>
                     </div>
-                    <button>Войти</button>
+                    <button onClick={props.onLoginClick}>Войти</button>
                 </div>
                 <div className={'sub-info-points-container' + mobileClass}>
                     {sub_pluses.map(s => {

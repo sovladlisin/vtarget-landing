@@ -24,17 +24,16 @@ const ReviewGallery: React.FunctionComponent<IReviewGalleryProps> = (props) => {
 
     const gallery_items = [
         { item: Img1, id: 0 },
-        { item: Img2, id: 1 },
-        { item: Img3, id: 2 },
-        { item: Img4, id: 3 },
-        { item: Img5, id: 4 },
-        { item: Img6, id: 5 },
-        { item: Img7, id: 6 },
-        { item: Img8, id: 7 },
-        { item: Img9, id: 8 },
-        { item: Img10, id: 9 },
-        { item: Img11, id: 10 },
-        { item: Img12, id: 11 },
+        { item: Img3, id: 1 },
+        { item: Img4, id: 2 },
+        { item: Img5, id: 3 },
+        { item: Img6, id: 4 },
+        { item: Img7, id: 5 },
+        { item: Img8, id: 6 },
+        { item: Img9, id: 7 },
+        { item: Img10, id: 8 },
+        { item: Img11, id: 9 },
+        { item: Img12, id: 10 },
     ]
 
     const [counter, setCounter] = React.useState(0)
