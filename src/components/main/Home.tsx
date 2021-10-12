@@ -71,18 +71,26 @@ const Home: React.FC = (props: IAppProps) => {
         }
     }, [, loginPopupWindow])
 
-    function zoomOutMobile() {
-        var viewport = document.querySelector('meta[name="viewport"]');
 
-        if (viewport) {
-            // @ts-ignore
-            viewport.content = "initial-scale=0.1";
-            // @ts-ignore
+    var viewport = document.querySelector('meta[name="viewport"]');
 
-            viewport.content = "width=1400";
+    if (viewport) {
+        if (isMobile) {
+            // @ts-ignore
+            viewport.content = "maximum-scale=0.01, minimum-scale=0.01, initial-scale=0.01";
         }
     }
-    React.useEffect(() => { isMobile && zoomOutMobile() }, [isMobile])
+
+    React.useEffect(() => {
+        if (isMobile) {
+            setTimeout(function () {
+                var viewport = document.querySelector('meta[name="viewport"]');
+                // @ts-ignore
+                viewport.content = "width=1440";
+            }, 1500);
+
+        }
+    })
 
     return <>
         <div className={'page-container' + mobileClass}>
