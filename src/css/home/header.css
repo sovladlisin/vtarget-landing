@@ -5,6 +5,7 @@
   min-width: 1160px;
   margin: 0 auto;
   padding: 0 50px;
+  display: inline-block;
 }
 .header-container {
   height: 50px;
@@ -53,4 +54,8 @@
 }
 .header-contact-button-container > span {
   line-height: 40px;
+}
+
+#root {
+  display: inline-block;
 }

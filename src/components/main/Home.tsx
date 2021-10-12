@@ -71,6 +71,19 @@ const Home: React.FC = (props: IAppProps) => {
         }
     }, [, loginPopupWindow])
 
+    function zoomOutMobile() {
+        var viewport = document.querySelector('meta[name="viewport"]');
+
+        if (viewport) {
+            // @ts-ignore
+            viewport.content = "initial-scale=0.1";
+            // @ts-ignore
+
+            viewport.content = "width=1400";
+        }
+    }
+    React.useEffect(() => { isMobile && zoomOutMobile() }, [isMobile])
+
     return <>
         <div className={'page-container' + mobileClass}>
             <Header
