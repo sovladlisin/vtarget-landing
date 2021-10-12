@@ -4,6 +4,8 @@
   margin-top: 100px;
   padding: 20px 0;
   position: relative;
+  width: 100%;
+  display: inline-block;
 }
 .footer-main {
   width: 1340px;

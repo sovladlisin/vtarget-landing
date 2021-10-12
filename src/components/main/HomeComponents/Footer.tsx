@@ -12,11 +12,11 @@ const Footer: React.FunctionComponent<IFooterProps> = (props) => {
     return <>
 
         <div className={'footer' + mobileClass}>
-            <div id='wave'>
+            {!isMobile && <div id='wave'>
                 <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
                     <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style={{ stroke: 'none', fill: '#0d253c' }}></path>
                 </svg>
-            </div>
+            </div>}
 
             <div className={'footer-main' + mobileClass}>
                 <div className={'footer-left' + mobileClass}>
