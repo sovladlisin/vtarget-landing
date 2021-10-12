@@ -72,24 +72,32 @@ const Home: React.FC = (props: IAppProps) => {
     }, [, loginPopupWindow])
 
 
-    var viewport = document.querySelector('meta[name="viewport"]');
+    const [changed, setChanged] = useState(false)
 
-    if (viewport) {
-        if (isMobile) {
-            // @ts-ignore
-            viewport.content = "maximum-scale=0.01, minimum-scale=0.01, initial-scale=0.01";
-        }
-    }
 
     React.useEffect(() => {
-        if (isMobile) {
-            setTimeout(function () {
-                var viewport = document.querySelector('meta[name="viewport"]');
-                // @ts-ignore
-                viewport.content = "width=1440";
-            }, 1500);
+        if (!changed) {
+            var viewport = document.querySelector('meta[name="viewport"]');
 
+            if (viewport) {
+                if (isMobile) {
+                    // @ts-ignore
+                    viewport.content = "maximum-scale=0.01, minimum-scale=0.01, initial-scale=0.01";
+                }
+            }
+
+            if (isMobile) {
+                setTimeout(function () {
+                    var viewport = document.querySelector('meta[name="viewport"]');
+                    // @ts-ignore
+                    viewport.content = "width=1440";
+                    setChanged(true)
+
+                }, 1500);
+
+            }
         }
+
     })
 
     return <>
