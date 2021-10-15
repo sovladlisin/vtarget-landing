@@ -11,13 +11,16 @@
 .benefitcards-image-container {
   background: #F4F7FF;
   border-radius: 35px;
+  width: 90%;
+  margin: 0 auto;
 }
 .benefitcards-image-container > img {
   margin: 0 auto;
   display: block;
+  height: 220px;
 }
 .benefitcards-container p {
-  font-size: 22px;
+  font-size: 19px;
   line-height: 32px;
   text-align: center;
   color: #2D4379;

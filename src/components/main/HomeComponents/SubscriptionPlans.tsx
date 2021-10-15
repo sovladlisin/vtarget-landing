@@ -45,7 +45,7 @@ const SubscriptionPlans: React.FunctionComponent<ISubscriptionPlansProps> = (pro
                 </div>
                 <div className={'sub-info-points-container' + mobileClass}>
                     {sub_pluses.map(s => {
-                        const classN = s.id <= 10 ? ' sub-info-line-includes' : ''
+                        const classN = s.id <= 11 ? ' sub-info-line-includes' : ''
                         return <>
                             <div className={'sub-info-line' + mobileClass + classN}>
                                 <span><i className='far fa-check-circle'></i></span>
@@ -67,7 +67,7 @@ const SubscriptionPlans: React.FunctionComponent<ISubscriptionPlansProps> = (pro
                     <button onClick={props.onLoginClick}>Войти</button>
                 </div>
                 <div className={'sub-info-points-container' + mobileClass}>
-                    {sub_pluses.map(s => {
+                    {sub_pluses.filter(s => s.id != 11).map(s => {
                         const classN = ' sub-info-line-includes'
                         return <>
                             <div className={'sub-info-line' + mobileClass + classN}>

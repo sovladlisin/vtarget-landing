@@ -1,60 +1,61 @@
 
 .faq-container {
-    width: 950px;
-    margin: 30px auto;
-  }
-  .faq-line-container {
-    border-bottom: 1px solid #E9EEFA;
-  }
-  .faq-line {
-    padding: 20px 0;
-    line-height: 40px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto 40px;
-    gap: 30px;
-    justify-items: left;
-    justify-content: initial;
-  }
-  .faq-line > p {
-    float: left;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 33px;
-    color: #16181B;
-    cursor: pointer;
-  }
-  .faq-line > span {
-    float: right;
-    height: 40px;
-    line-height: 40px;
-    margin: auto 0;
-    cursor: pointer;
-  }
-  .faq-line-desc > p {
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    color: #2D4379;
-    margin: 0 0 20px 0;
-    width: 70%;
-    white-space: break-spaces;
-  }
-  
-.faq-line-desc ul {
+  width: 950px;
+  margin: 30px auto;
+}
+.faq-line-container {
+  border-bottom: 1px solid #E9EEFA;
+}
+.faq-line {
+  padding: 20px 0;
+  line-height: 40px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 40px;
+  gap: 30px;
+  justify-items: left;
+  justify-content: initial;
+}
+.faq-line > p {
+  float: left;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  color: #16181B;
+  cursor: pointer;
+  width: 100%;
+}
+.faq-line > span {
+  float: right;
+  height: 40px;
+  line-height: 40px;
+  margin: auto 0;
+  cursor: pointer;
+}
+.faq-line-desc > p {
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   color: #2D4379;
   margin: 0 0 20px 0;
   width: 70%;
   white-space: break-spaces;
-  list-style-type: disc;
-  margin-left: 15px;
+}
+
+.faq-line-desc ul {
+font-weight: normal;
+font-size: 14px;
+line-height: 24px;
+color: #2D4379;
+margin: 0 0 20px 0;
+width: 70%;
+white-space: break-spaces;
+list-style-type: disc;
+margin-left: 15px;
 }
 .faq-line-desc a {
-  color: #386BEE;
-  font-weight: bold;
-  text-decoration: underline;
+color: #386BEE;
+font-weight: bold;
+text-decoration: underline;
 }
