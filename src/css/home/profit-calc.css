@@ -116,8 +116,11 @@
   }
   
 .profit-calc-numbers-container.mobile {
-  scale: 0.6;
   margin: 0;
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  transform: scale(0.6);
 }
 
 .profit-calc-container.mobile>p {
