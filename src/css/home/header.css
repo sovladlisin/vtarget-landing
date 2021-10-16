@@ -26,14 +26,14 @@
 }
 .header-page-buttons {
   display: grid;
-  grid-template-columns: repeat(4,auto);
+  grid-template-columns: repeat(5,auto);
   height: 30px;
   margin: 10px auto 10px 0;
-  gap: 87px;
+  gap: 60px;
 }
 .header-page-buttons > button {
   font-size: 14px;
-  line-height: 30px;
+  line-height: 35px;
   color: #B3B7C1;
 }
 .header-contact-button-container {
@@ -47,6 +47,7 @@
   justify-content: center;
   color: #386BEE;
   width: 240px;
+  margin-top: 5px;
 }
 .header-contact-button-container > p {
   font-size: 14pt;
@@ -57,4 +58,72 @@
 }
 body{
   -webkit-text-size-adjust: none;
+}
+
+.page-container.mobile {
+  width: 90%;
+  padding: 0;
+  min-width: 90%;
+}
+.header-side-panel-button {
+  height: 40px;
+  width: 40px;
+  line-height: 30px;
+  margin: 10px 0;
+  float: right;
+  background: #386BEE;
+  border-radius: 50px;
+  color: white;
+}
+.header-contact-button-container.mobile {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  float: right;
+  box-shadow: 0 0 4px gainsboro;
+  border: none;
+  margin: 10px 15px;
+}
+.header-contact-button-container.mobile > a {
+  font-size: 9pt;
+  color: #386BEE;
+}
+.header-container.mobile {
+  display: block;
+  height: 60px;
+}
+.header-logo.mobile {
+  height: 30px;
+  margin: 15px 0;
+}
+.header-logo.mobile > img {
+  height: 30px;
+}
+
+.header-side-panel-container {
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  gap: 10px;
+  transform: translate(-50%,-50%);
+}
+.header-side-panel-container > button {
+  color: white;
+  border-radius: 40px;
+  height: 50px;
+  font-size: 10pt;
+  width: 205px;
+  border: 1px solid aliceblue;
+}
+
+.header-side-panel-container i {
+  margin-right: 10px;
+  display: none;
+}
+
+.header-page-buttons > button:hover {
+  color: #3b6bec;
+  transition: 0.3s all;
 }

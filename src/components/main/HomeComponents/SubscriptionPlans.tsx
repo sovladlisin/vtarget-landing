@@ -30,54 +30,154 @@ const SubscriptionPlans: React.FunctionComponent<ISubscriptionPlansProps> = (pro
 
     const mobileClass = isMobile ? ' mobile' : ''
 
+    const [selectedCard, setSelectedCard] = React.useState(1)
+
+    var nav_leg = {
+        0: 1,
+        1: 0
+    }
+
+    const [touchStart, setTouchStart] = React.useState(0);
+    const [touchEnd, setTouchEnd] = React.useState(0);
+
+    function handleTouchStart(e) {
+        setTouchStart(e.targetTouches[0].clientX);
+    }
+
+    function handleTouchMove(e) {
+        setTouchEnd(e.targetTouches[0].clientX);
+    }
+
+    function handleTouchEnd() {
+        if (touchStart - touchEnd > 150) {
+            setSelectedCard(nav_leg[selectedCard])
+        }
+
+        if (touchStart - touchEnd < -150) {
+            setSelectedCard(nav_leg[selectedCard])
+        }
+    }
+
     return <>
         <div className={'sub-info-container' + mobileClass}>
-            <div className={'sub-info-free' + mobileClass}>
-                <div className={'sub-info-price-log-container' + mobileClass}>
-                    <div className={'sub-info-price-container' + mobileClass}>
-                        <div className={'sub-info-price-amount-container' + mobileClass}>
-                            <p>0₽</p>
-                            <span>/ месяц</span>
-                        </div>
-                        <p>Бесплатный тариф</p>
-                    </div>
-                    <button onClick={props.onLoginClick}>Войти</button>
-                </div>
-                <div className={'sub-info-points-container' + mobileClass}>
-                    {sub_pluses.map(s => {
-                        const classN = s.id <= 11 ? ' sub-info-line-includes' : ''
-                        return <>
-                            <div className={'sub-info-line' + mobileClass + classN}>
-                                <span><i className='far fa-check-circle'></i></span>
-                                <p>{s.text}</p>
+            {!isMobile && <>
+                <div className={'sub-info-free' + mobileClass}>
+                    <div className={'sub-info-price-log-container' + mobileClass}>
+                        <div className={'sub-info-price-container' + mobileClass}>
+                            <div className={'sub-info-price-amount-container' + mobileClass}>
+                                <p>0₽</p>
+                                <span>/ месяц</span>
                             </div>
-                        </>
-                    })}
-                </div>
-            </div>
-            <div className={'sub-info-pay' + mobileClass}>
-                <div className={'sub-info-price-log-container' + mobileClass}>
-                    <div className={'sub-info-price-container' + mobileClass}>
-                        <div className={'sub-info-price-amount-container' + mobileClass}>
-                            <p>2000₽</p>
-                            <span>/ месяц</span>
+                            <p>Бесплатный тариф</p>
                         </div>
-                        <p>Безлимит</p>
+                        <button onClick={props.onLoginClick}>Войти</button>
                     </div>
-                    <button onClick={props.onLoginClick}>Войти</button>
+                    <div className={'sub-info-points-container' + mobileClass}>
+                        {sub_pluses.map(s => {
+                            const classN = s.id <= 11 ? ' sub-info-line-includes' : ''
+                            return <>
+                                <div className={'sub-info-line' + mobileClass + classN}>
+                                    <span><i className='far fa-check-circle'></i></span>
+                                    <p>{s.text}</p>
+                                </div>
+                            </>
+                        })}
+                    </div>
                 </div>
-                <div className={'sub-info-points-container' + mobileClass}>
-                    {sub_pluses.filter(s => s.id != 11).map(s => {
-                        const classN = ' sub-info-line-includes'
-                        return <>
-                            <div className={'sub-info-line' + mobileClass + classN}>
-                                <span><i className='fas fa-check-circle'></i></span>
-                                <p>{s.text}</p>
+                <div className={'sub-info-pay' + mobileClass}>
+                    <div className={'sub-info-price-log-container' + mobileClass}>
+                        <div className={'sub-info-price-container' + mobileClass}>
+                            <div className={'sub-info-price-amount-container' + mobileClass}>
+                                <p>2000₽</p>
+                                <span>/ месяц</span>
                             </div>
-                        </>
-                    })}
+                            <p>Безлимит</p>
+                        </div>
+                        <button onClick={props.onLoginClick}>Войти</button>
+                    </div>
+                    <div className={'sub-info-points-container' + mobileClass}>
+                        {sub_pluses.filter(s => s.id != 11).map(s => {
+                            const classN = ' sub-info-line-includes'
+                            return <>
+                                <div className={'sub-info-line' + mobileClass + classN}>
+                                    <span><i className='fas fa-check-circle'></i></span>
+                                    <p>{s.text}</p>
+                                </div>
+                            </>
+                        })}
+                    </div>
                 </div>
-            </div>
+            </>}
+
+
+            {isMobile && <>
+                {selectedCard === 0 && <>
+                    <div className={'sub-info-free' + mobileClass}
+                        onTouchStart={handleTouchStart}
+                        onTouchEnd={handleTouchEnd}
+                        onTouchMove={handleTouchMove}
+                    >
+                        <div className={'sub-info-price-log-container' + mobileClass}>
+                            <div className={'sub-info-price-container' + mobileClass}>
+                                <div className={'sub-info-price-amount-container' + mobileClass}>
+                                    <p>0₽</p>
+                                    <span>/ месяц</span>
+                                </div>
+                                <p>Бесплатный тариф</p>
+                            </div>
+                            <button onClick={props.onLoginClick}>Войти</button>
+                        </div>
+                        <div className={'sub-info-points-container' + mobileClass}>
+                            {sub_pluses.map(s => {
+                                const classN = s.id <= 11 ? ' sub-info-line-includes' : ''
+                                return <>
+                                    <div className={'sub-info-line' + mobileClass + classN}>
+                                        <span><i className='far fa-check-circle'></i></span>
+                                        <p>{s.text}</p>
+                                    </div>
+                                </>
+                            })}
+                        </div>
+                    </div>
+                </>}
+
+                {selectedCard === 1 && <>
+                    <div className={'sub-info-pay' + mobileClass}
+                        onTouchStart={handleTouchStart}
+                        onTouchEnd={handleTouchEnd}
+                        onTouchMove={handleTouchMove}
+                    >
+                        <div className={'sub-info-price-log-container' + mobileClass}>
+                            <div className={'sub-info-price-container' + mobileClass}>
+                                <div className={'sub-info-price-amount-container' + mobileClass}>
+                                    <p>2000₽</p>
+                                    <span>/ месяц</span>
+                                </div>
+                                <p>Безлимит</p>
+                            </div>
+                            <button onClick={props.onLoginClick}>Войти</button>
+                        </div>
+                        <div className={'sub-info-points-container' + mobileClass}>
+                            {sub_pluses.filter(s => s.id != 11).map(s => {
+                                const classN = ' sub-info-line-includes'
+                                return <>
+                                    <div className={'sub-info-line' + mobileClass + classN}>
+                                        <span><i className='fas fa-check-circle'></i></span>
+                                        <p>{s.text}</p>
+                                    </div>
+                                </>
+                            })}
+                        </div>
+                    </div>
+                </>}
+            </>}
+            {isMobile && <>
+                <div className={'sub-dots-buttons' + mobileClass}>
+                    <button onClick={_ => setSelectedCard(nav_leg[selectedCard])}><i className="fas fa-chevron-left"></i></button>
+                    <button onClick={_ => setSelectedCard(nav_leg[selectedCard])}><i className="fas fa-chevron-right"></i></button>
+                </div>
+            </>}
+
         </div>
     </>;
 };

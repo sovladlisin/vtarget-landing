@@ -41,3 +41,32 @@
   grid-template-columns: 1fr 1fr;
   gap: 25px;
 }
+
+.review-gallery-image-container.mobile {
+  width: inherit;
+  max-width: 590px;
+}
+.review-gallery-image-container.mobile > img {
+  width: 100%;
+  /*! height: auto; */
+  object-fit: cover;
+  height: unset;
+}
+.review-gallery-nav-panel.mobile {
+  gap: 10px;
+  margin: 10px auto;
+}
+.review-gallery-dots.mobile > span {
+  font-size: 4pt;
+  margin: auto 5px;
+}
+.review-gallery-buttons.mobile {
+  gap: 10px;
+}
+.review-gallery-buttons.mobile > button {
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  font-size: 9pt;
+  margin: auto 0;
+}

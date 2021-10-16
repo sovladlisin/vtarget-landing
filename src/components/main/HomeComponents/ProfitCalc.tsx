@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { isMobile } from 'react-device-detect';
 import '../../../css/home/profit-calc.css'
+import { convertNumberDot } from '../../../utils';
 
 interface IProfitCalcProps {
     numberOfHours: number
@@ -30,12 +31,12 @@ const ProfitCalc: React.FunctionComponent<IProfitCalcProps> = (props) => {
                     </>
                 }).reverse()}
             </div>
-            <p> часов - это {Math.ceil(props.numberOfHours / 8)} рабочих
-                дней по 8 часов, или {Math.ceil(props.numberOfHours / 8 / 22)} месяцев, по 22 рабочих дня,
+            <p> часов - это {convertNumberDot(Math.ceil(props.numberOfHours / 8))} рабочих
+                дней по 8 часов, или {convertNumberDot(Math.ceil(props.numberOfHours / 8 / 22))} месяцев, по 22 рабочих дня,
                 или {Math.ceil(props.numberOfHours / 8 / 22 / 12)} года...
             </p>
             <p>Наши пользователи сделали для рекламного рынка за один год столько, сколько без автоматизации делали
-                бы {Math.round((props.numberOfHours / 8 / 22 / 12 / 100) * 10) / 10} века.
+                бы {(Math.round((props.numberOfHours / 8 / 22 / 12 / 100) * 10) / 10).toLocaleString().replace('.', ",")} века
             </p>
         </div>
     </>;

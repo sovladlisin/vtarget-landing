@@ -24,7 +24,7 @@ const FAQ: React.FunctionComponent<IFAQProps> = (props) => {
             answer: <>
                 <p>Посмотрите {l('https://vk.com/videos-182472456?section=album_3', 'короткие видео-инструкции')} в нашем сообществе в ВК.</p>
                 <p>Для работы со статистикой и расчета регистраций
-                    подключите {l('https://vk.com/@vtargeteru-kak-integrirovatsya-polnostu-s-senlerru', 'Сенлер')}, {l('https://vk.com/@vtargeteru-kak-avtomaticheski-sozdavat-ssylki-na-saity-s-utm-metkami-is', 'я.метрику')}, {l('https://vk.com/@vtargeteru-integraciya-s-salebot', 'Salebot')} к сервису (интеграция).
+                    подключите {l('https://vk.com/@vtargeteru-kak-integrirovatsya-polnostu-s-senlerru', 'Сенлер')}, {l('https://vk.com/@vtargeteru-kak-avtomaticheski-sozdavat-ssylki-na-saity-s-utm-metkami-is', 'Я.Метрику')}, {l('https://vk.com/@vtargeteru-integraciya-s-salebot', 'Salebot')} к сервису (интеграция).
                 </p>
                 <p>Выберите любую кампанию через окно в левом верхнем углу и начинайте работу.</p>
                 <p>В меню справа "Настройки" во вкладке "{l('https://vk.com/@vtargeteru-otvety-na-chastye-voprosy-chast-2-1-3?anchor=vopros-5-kak-ne-nastraivat-pod-sebya-razmer-stolbtsov-kazhdy-raz', 'Конфигурации')}" сохраняйте удобные рабочие настройки столбцов под разные задачи.</p>
@@ -37,8 +37,8 @@ const FAQ: React.FunctionComponent<IFAQProps> = (props) => {
             answer: <>
                 <p>Возможности на данный момент такие:</p>
                 <ul>
-                    <li>Генерация ссылок с utm метками для Senler, я.метрики (сайтов), Salebot</li>
-                    <li>Расчет стоимости регистрации для Senler, я.метрики, Salebot</li>
+                    <li>Генерация ссылок с utm-метками для Senler, Я.Метрики (сайтов), Salebot</li>
+                    <li>Расчет стоимости регистрации для Senler, Я.Метрики, Salebot</li>
                     <li>Стратегии управления ставками</li>
                     <li>Теги для объединения объявлений по разным признакам</li>
                     <li>Разгадывает капчу</li>
@@ -60,7 +60,7 @@ const FAQ: React.FunctionComponent<IFAQProps> = (props) => {
                 <p>Массовое изменение и замена:</p>
                 <ul>
                     <li>Любых параметров объявлений (ставки, лимиты, возраст, пол, категории интересов, аудитории ретагетинга и т.д.) </li>
-                    <li>Текста, ссылок, параметров ссылок, utm меток, дат в тексте, картинок, сниппетов</li>
+                    <li>Текста, ссылок, параметров ссылок, utm-меток, дат в тексте, картинок, сниппетов</li>
                     <li>Отправка на повторную модерацию в 2 клика</li>
                 </ul>
                 <p>Ограничения на данный момент такие:</p>

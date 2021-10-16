@@ -43,10 +43,35 @@ const ReviewGallery: React.FunctionComponent<IReviewGalleryProps> = (props) => {
     const onBack = () => {
         counter - 1 < 0 ? setCounter(gallery_items.length - 1) : setCounter(counter - 1)
     }
+
+    const [touchStart, setTouchStart] = React.useState(0);
+    const [touchEnd, setTouchEnd] = React.useState(0);
+
+    function handleTouchStart(e) {
+        setTouchStart(e.targetTouches[0].clientX);
+    }
+
+    function handleTouchMove(e) {
+        setTouchEnd(e.targetTouches[0].clientX);
+    }
+
+    function handleTouchEnd() {
+        if (touchStart - touchEnd > 150) {
+            onForward()
+        }
+
+        if (touchStart - touchEnd < -150) {
+            onBack()
+        }
+    }
     return <>
         <div className={'review-gallery-container' + mobileClass}>
             <div className={'review-gallery-image-container' + mobileClass}>
-                <img src={gallery_items.find(i => i.id === counter).item}></img>
+                <img
+                    onTouchStart={handleTouchStart}
+                    onTouchEnd={handleTouchEnd}
+                    onTouchMove={handleTouchMove}
+                    src={gallery_items.find(i => i.id === counter).item}></img>
             </div>
             <div className={'review-gallery-nav-panel' + mobileClass}>
                 <div className={'review-gallery-dots' + mobileClass}>

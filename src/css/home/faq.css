@@ -59,3 +59,26 @@ color: #386BEE;
 font-weight: bold;
 text-decoration: underline;
 }
+
+.faq-container.mobile {
+  width: 100%;
+  max-width: 390px;
+}
+.faq-line.mobile > p {
+  font-size: 13pt;
+  line-height: 27px;
+  height: max-content;
+  margin: auto 0;
+}
+.faq-line-desc.mobile p {
+  font-size: 10pt;
+  width: 100%;
+}
+
+.faq-line-container.mobile ul {
+  font-size: 10pt;
+  width: 90%;
+}
+.faq-line-container.mobile li {
+  margin: 5px 0;
+}

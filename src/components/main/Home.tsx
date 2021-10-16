@@ -50,18 +50,20 @@ const Home: React.FC = (props: IAppProps) => {
     const scrollRef3 = React.useRef(null)
     const scrollRef4 = React.useRef(null)
     const scrollRef5 = React.useRef(null)
+    const scrollRef6 = React.useRef(null)
     const scroll1 = () => scrollRef1.current.scrollIntoView({ behavior: 'smooth' })
     const scroll2 = () => scrollRef2.current.scrollIntoView({ behavior: 'smooth' })
     const scroll3 = () => scrollRef3.current.scrollIntoView({ behavior: 'smooth' })
     const scroll4 = () => scrollRef4.current.scrollIntoView({ behavior: 'smooth' })
     const scroll5 = () => scrollRef5.current.scrollIntoView({ behavior: 'smooth' })
+    const scroll6 = () => scrollRef6.current.scrollIntoView({ behavior: 'smooth' })
 
     const [loginPopupWindow, setLoginPopupWindow] = useState(false)
-
+    const [stopScroll, setStopScroll] = useState(false)
     React.useEffect(() => {
         const objRef = document.body
 
-        if (loginPopupWindow) {
+        if (loginPopupWindow || stopScroll) {
             objRef.style.overflow = "hidden";
             objRef.style.height = "100%";
         }
@@ -69,36 +71,36 @@ const Home: React.FC = (props: IAppProps) => {
             objRef.style.overflow = "unset";
             objRef.style.height = "unset";
         }
-    }, [, loginPopupWindow])
+    }, [, loginPopupWindow, stopScroll])
 
 
-    const [changed, setChanged] = useState(false)
+    // const [changed, setChanged] = useState(false)
 
 
-    React.useEffect(() => {
-        if (!changed) {
-            var viewport = document.querySelector('meta[name="viewport"]');
+    // React.useEffect(() => {
+    //     if (!changed) {
+    //         var viewport = document.querySelector('meta[name="viewport"]');
 
-            if (viewport) {
-                if (isMobile) {
-                    // @ts-ignore
-                    viewport.content = "maximum-scale=0.01, minimum-scale=0.01, initial-scale=0.01";
-                }
-            }
+    //         if (viewport) {
+    //             if (isMobile) {
+    //                 // @ts-ignore
+    //                 viewport.content = "maximum-scale=0.01, minimum-scale=0.01, initial-scale=0.01";
+    //             }
+    //         }
 
-            if (isMobile) {
-                setTimeout(function () {
-                    var viewport = document.querySelector('meta[name="viewport"]');
-                    // @ts-ignore
-                    viewport.content = "width=1440";
-                    setChanged(true)
+    //         if (isMobile) {
+    //             setTimeout(function () {
+    //                 var viewport = document.querySelector('meta[name="viewport"]');
+    //                 // @ts-ignore
+    //                 viewport.content = "width=1440";
+    //                 setChanged(true)
 
-                }, 1500);
+    //             }, 1500);
 
-            }
-        }
+    //         }
+    //     }
 
-    })
+    // })
 
     return <>
         <div className={'page-container' + mobileClass}>
@@ -107,6 +109,8 @@ const Home: React.FC = (props: IAppProps) => {
                 onScroll2={scroll2}
                 onScroll3={scroll3}
                 onScroll4={scroll4}
+                onScroll5={scroll6}
+                onStopScroll={(check) => setStopScroll(check)}
             />
             <TitleCard
                 onMoreClick={scroll5}
@@ -144,6 +148,7 @@ const Home: React.FC = (props: IAppProps) => {
             <h2 className={'home-h2' + mobileClass}>Кейсы пользователей</h2>
             <UseCases />
 
+            <span ref={scrollRef6}></span>
             <h2 className={'home-h2' + mobileClass}>Прямые эфиры <a target='_blank' rel="noopener noreferrer" href={'https://vk.com/videos-182472456?section=album_2'}>"Втаргете для блондинок"</a></h2>
             <StreamArchive />
 

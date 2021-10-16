@@ -256,6 +256,10 @@ export const convertMoney = (m: number) => {
     if (!m) return '0 ₽'
     return m.toLocaleString().replace(/,/g, " ",) + '  ₽'
 }
+export const convertNumberDot = (m: number) => {
+    if (!m) return '0 ₽'
+    return m.toLocaleString().replace(/,/g, ".",) + ''
+}
 
 export const getCabinetStatusColor = (status: number) => {
     var status_color = 'red'

@@ -21,7 +21,12 @@ const BenefitCards: React.FunctionComponent<IBenefitCardsProps> = (props) => {
                 <div className={'benefitcards-image-container' + mobileClass}>
                     <img src={Guy1}></img>
                 </div>
-                <p>Тратит большую часть рабочего времени на однотипные задачи, тонет в рутине</p>
+
+
+
+                {!isMobile && <p>Тратит большую часть рабочего<br />времени на однотипные задачи,<br />не получает удовольствия от<br />работы, тонет в рутине</p>}
+                {isMobile && <p>Тратит большую часть рабочего времени на однотипные задачи, не получает удовольствия от работы, тонет в рутине</p>}
+
             </div>
             <div>
                 <div className={'benefitcards-image-container' + mobileClass}>
@@ -33,7 +38,8 @@ const BenefitCards: React.FunctionComponent<IBenefitCardsProps> = (props) => {
                 <div className={'benefitcards-image-container' + mobileClass}>
                     <img src={Guy3}></img>
                 </div>
-                <p>Ограничен в финансовом и профессиональном росте - физически не успевает больше</p>
+                <p>Ограничен в финансовом и профессиональном росте - <br></br> - физически не успевает больше</p>
+
             </div>
         </div>
     </>;

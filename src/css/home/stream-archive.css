@@ -1,37 +1,54 @@
 
 .streams-container {
-    max-width: 1200px;
-    margin: 20px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
-  }
-  .stream-block {
-    border: 2px solid #386BEE;
-    box-sizing: border-box;
-    border-radius: 10px;
-    padding: 35px;
-  }
-  .stream-title {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 29px;
-    color: #16181B;
-    height: 110px;
-  }
-  .stream-block > a {
-    color: #386BEE;
-    display: inline-block;
-    height: 20px;
-  }
-  .stream-block > a > p {
-    width: max-content;
-    line-height: 20px;
-    float: left;
-  }
-  .stream-block > a > i {
-    line-height: 22px;
-    font-size: 15px;
-    margin-left: 10px;
-  }
+  max-width: 1200px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+.stream-block {
+  border: 2px solid #386BEE;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 35px;
+}
+.stream-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 29px;
+  color: #16181B;
+  height: 110px;
+}
+.stream-block > a {
+  color: #386BEE;
+  display: inline-block;
+  height: 20px;
+}
+.stream-block > a > p {
+  width: max-content;
+  line-height: 20px;
+  float: left;
+}
+.stream-block > a > i {
+  line-height: 22px;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.streams-container.mobile {
+grid-template-columns: auto;
+max-width: 390px;
+width: 100%;
+}
+.stream-title.mobile {
+font-size: 13pt;
+height: auto;
+margin-bottom: 15px;
+}
+.stream-block.mobile > a > p {
+font-size: 10pt;
+}
+.stream-block.mobile > a > i {
+font-size: 8pt;
+}

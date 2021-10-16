@@ -80,3 +80,71 @@
   height: 50px;
   color: #386BEE;
 }
+
+.titlecard-info-container.mobile > h1 {
+  margin: 20px 0;
+  font-size: 13pt;
+  line-height: 22px;
+  width: 100%;
+  text-align: center;
+}
+.titlecard-info-container.mobile {
+  width: 100%;
+}
+.titlecard-info-container.mobile > h3 {
+  font-size: 9pt;
+  line-height: 19px;
+  width: 100%;
+  text-align: center;
+  max-width: 390px;
+  margin: 0 auto;
+}
+.titlecard-info-buttons-container.mobile {
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 15px 0;
+  width: 100%;
+}
+.titlecard-container.mobile {
+  grid-template-columns: 5fr;
+  margin: 0px 0px;
+  overflow: visible;
+}
+.titlecard-info-buttons-container.mobile > button {
+  width: 80%;
+  height: 40px;
+  line-height: 37px;
+  font-size: 9pt;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  margin: 0 auto;
+  max-width: 290px;
+}
+.titlecard-info-button-start.mobile > p {
+  height: 40px;
+  margin: 0;
+  line-height: 40px;
+}
+.titlecard-info-button-start.mobile > i {
+  height: 40px;
+  line-height: 40px;
+  width: 15px;
+}
+.titlecard-image-container.mobile > img {
+  width: 240px;
+  margin: 0 auto;
+}
+.titlecard-image-container.mobile {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+.titlecard-container.mobile > h1 {
+  text-align: center;
+  line-height: 20px;
+  width: 100%;
+}
+.titlecard-container.mobile > h1 > a {
+  color: #386BEE;
+  font-weight: bold;
+}

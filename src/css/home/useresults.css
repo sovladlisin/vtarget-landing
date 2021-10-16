@@ -18,7 +18,7 @@
   float: left;
   line-height: 55px;
   text-align: center;
-  font-size: 18pt;
+  font-size: 30pt;
   color: #65BE7E;
   margin-right: 20px;
 }
@@ -45,4 +45,35 @@
 }
 .useresults-image-container {
   height: 100%;
+}
+
+.useresults-image-container.mobile {
+  display: none;
+}
+.useresults-container.mobile {
+  grid-template-columns: auto;
+  width: inherit;
+  margin: 0 auto;
+  max-width: 390px;
+}
+.useresults-point.mobile p {
+  font-size: 17pt;
+  height: 40px;
+  line-height: 40px;
+}
+.useresults-point.mobile > p {
+  font-size: 10pt;
+  line-height: 18px;
+  margin-left: 25px;
+  margin-top: 0;
+  height: auto;
+}
+.useresults-point.mobile {
+  margin: 0;
+}
+.useresults-point.mobile i {
+  height: 40px;
+  line-height: 40px;
+  font-size: 20pt;
+  margin-right: 10px;
 }

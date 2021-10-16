@@ -114,3 +114,18 @@
     background: linear-gradient(179.98deg, #FDFDFE 0.53%, #EBEAEB 4.09%, #BBB9BA 14.58%, #908D8D 25.59%, #6C6968 36.94%, #4F4B4A 48.72%, #393333 61.06%, #292322 74.2%, #1F1918 88.71%, #1C1615 107.26%);
     z-index: 5;
   }
+  
+.profit-calc-numbers-container.mobile {
+  scale: 0.6;
+  margin: 0;
+}
+
+.profit-calc-container.mobile>p {
+  font-size: 11pt;
+  line-height: 22px;
+  margin: 0 0 10px 0;
+}
+.profit-calc-container.mobile {
+  padding: 0;
+  margin: 0;
+}

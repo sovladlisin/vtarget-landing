@@ -39,3 +39,21 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+  .use-case-container.mobile {
+    width: 100%;
+    max-width: 390px;
+    grid-template-columns: auto;
+    gap: 10px;
+  }
+  .use-case-title.mobile {
+    font-size: 13pt;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  .use-case-block.mobile > a > p {
+    font-size: 10pt;
+    margin-left: 0;
+  }
+  .use-case-block.mobile > a > span {
+    scale: 0.7;
+  }

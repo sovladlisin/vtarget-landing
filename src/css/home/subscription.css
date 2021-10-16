@@ -97,3 +97,60 @@ sub-info-price-container > button {
   color: white !important;
   border-color: white !important;
 }
+
+.sub-info-points-container.mobile {
+  font-size: 10pt;
+}
+.sub-info-container.mobile {
+  display: block;
+  width: 100%;
+  max-width: 390px;
+  margin: 10px auto;
+}
+.sub-info-pay.mobile {
+  width: 100%;
+  max-width: 390px;
+  display: inline-block;
+}
+.sub-dots-buttons.mobile > button {
+  background: #386BEE;
+  box-shadow: 0px 8px 16px rgba(56, 107, 238, 0.25);
+  height: 40px !important;
+  width: 40px !important;
+  color: white;
+  border-radius: 55px;
+  font-size: 13px;
+}
+.sub-dots-buttons.mobile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 15px;
+  width: max-content;
+  margin: 15px auto;
+}
+.sub-info-price-amount-container.mobile > p {
+  font-size: 22pt;
+  height: 40px;
+  line-height: 40px;
+}
+.sub-info-container.mobile button {
+  width: 100px;
+  height: 40px;
+  font-size: 10pt;
+}
+.sub-info-price-amount-container.mobile > span {
+  height: 40px;
+  line-height: 50px;
+}
+.sub-info-price-container.mobile > p {
+  font-size: 12pt;
+}
+.sub-info-price-log-container.mobile {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.sub-info-points-container.mobile > div {
+  margin: 15px 0;
+  pointer-events: none;
+}

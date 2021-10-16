@@ -1,43 +1,73 @@
 
 .function-list-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 70px;
-    width: 1090px;
-    margin: 0 auto;
-  }
-  .function-list-container > div {
-    background: rgba(244, 247, 255, 0.69);
-    border-radius: 20px;
-    padding: 30px 60px;
-  }
-  .function-list-container > div > h4 {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 33px;
-    color: #16181B;
-  }
-  .function-list-container ul {
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    color: #2D4379;
-    list-style-type: disc;
-    margin-left: 15px;
-    margin-top: 15px;
-  }
-  .function-list-container li {
-    margin: 20px 0;
-  }
-  
-.function-list-icon-container {
-  color: #386BEE;
-  height: 40px;
-  width: 40px;
-  display: block;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  width: 1090px;
+  margin: 0 auto;
+}
+.function-list-container > div {
+  background: rgba(244, 247, 255, 0.69);
+  border-radius: 20px;
+  padding: 30px 60px;
+}
+.function-list-container > div > h4 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15pt;
   line-height: 40px;
-  font-size: 40px;
-  margin-bottom: 25px;
+  color: #16181B;
+}
+.function-list-container ul {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2D4379;
+  list-style-type: disc;
+  margin-left: 15px;
+  margin-top: 20px;
+}
+.function-list-container li {
+  margin: 20px 0;
+}
+
+.function-list-icon-container {
+color: #386BEE;
+height: 40px;
+width: 40px;
+display: block;
+text-align: center;
+line-height: 40px;
+font-size: 40px;
+margin-bottom: 0px;
+float: left;
+margin-right: 20px;
+}
+
+.function-list-container.mobile {
+grid-template-columns: auto;
+width: 100%;
+max-width: 390px;
+gap: 20px;
+}
+.function-list-icon-container.mobile {
+height: 20px;
+width: 20px;
+line-height: 20px;
+font-size: 20px;
+margin: 5px 10px 5px 0;
+}
+.function-list-container.mobile > div {
+padding: 30px;
+}
+.function-list-container.mobile > div > h4 {
+font-size: 15px;
+line-height: 30px;
+}
+.function-list-container.mobile > div ul {
+font-size: 10pt;
+margin-top: 10px;
+}
+.function-list-container.mobile > div li {
+margin: 5px 0;
 }

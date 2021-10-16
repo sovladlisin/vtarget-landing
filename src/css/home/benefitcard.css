@@ -20,7 +20,7 @@
   height: 220px;
 }
 .benefitcards-container p {
-  font-size: 19px;
+  font-size: 18px;
   line-height: 32px;
   text-align: center;
   color: #2D4379;
@@ -42,4 +42,61 @@
   /*! text-decoration: underline; */
   cursor: default;
   pointer-events: none;
+}
+
+
+.home-h2.mobile {
+  font-size: 16pt;
+  line-height: 28px;
+  margin: 30px auto;
+}
+.benefitcards-container.mobile {
+  grid-template-columns: auto;
+  gap: 20px;
+}
+.benefitcards-container.mobile > div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  background: #F4F7FF;
+  height: 160px;
+  border-radius: 15px;
+  max-width: 390px;
+  overflow: hidden;
+}
+.benefitcards-container.mobile p {
+  width: auto;
+  font-size: 10pt;
+  line-height: 20px;
+  height: max-content;
+  margin: auto 0;
+  text-align: center;
+}
+.benefitcards-image-container.mobile img {
+  height: inherit;
+}
+.benefitcards-image-container.mobile {
+  height: inherit;
+  width: 165px;
+}
+
+.home-h3 {
+  font-style: normal;
+  font-size: 13pt;
+  text-align: center;
+  color: #16181B;
+  margin: 50px auto;
+}
+.home-h3 > a {
+  color: #386BEE;
+  /*! text-decoration: underline; */
+  cursor: default;
+  pointer-events: none;
+}
+
+.home-h3.mobile {
+  font-size: 10pt;
+  line-height: 20px;
+  margin: 0 auto 10px auto;
+  color: #16181BF5;
 }

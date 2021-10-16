@@ -74,16 +74,17 @@
   line-height: 23px;
   height: 30px;
 }
-#wave svg {
-  /*! display: inline-block; */
+.wave svg {
+  display: inline-block;
   position: absolute;
-  top: 0;
+  top: -20px;
   left: 50%;
-  transform: rotateX(180deg);
+  /*! transform: rotateX(180deg); */
   height: 300px;
-  transform: scaleX(780%);
+  transform: translate(-50%) scaleX(780%);
+  background: #FFFFFF;
 }
-#wave {
+.wave {
   position: relative;
   width: 100%;
   padding-bottom: 100%;
@@ -92,12 +93,12 @@
   pointer-events: none;
   position: absolute;
   top: -60px;
-  right: 0;
+  left: 50%;
   height: 100px;
   margin: 0;
   padding: 0;
   z-index: 4;
-  transform: rotateX(180deg);
+  transform: translate(-50%) rotateX(180deg);
 }
 
 .footer-left-top-title-2 > a {
@@ -140,4 +141,98 @@
 .footer-bottom-right > a {
   text-align: right;
   color: #FFFFFF94;
+}
+
+.footer-main.mobile {
+  max-width: 390px;
+  width: 90%;
+  min-width: unset;
+  padding: 5px 0 15px 0;
+}
+.footer.mobile {
+  margin-top: 10px;
+}
+.footer-left-top.mobile {
+  font-size: 16pt;
+  line-height: 22px;
+  width: max-content;
+  margin: 10px 0;
+}
+.footer-left-bottom-phone.mobile > p {
+  font-size: 11pt;
+  height: 20px;
+}
+.footer-left-top-title.mobile {
+  width: max-content;
+}
+.footer-left-top-title-2.mobile {
+  width: max-content;
+}
+.footer-left-bottom.mobile {
+  width: max-content;
+  display: grid;
+  margin: 20px 0 10px 0;
+  gap: 10px;
+}
+.footer-left-bottom-phone.mobile {
+  width: max-content;
+  height: max-content;
+  margin: 0;
+}
+.footer-left-bottom-email.mobile {
+  width: max-content;
+  height: max-content;
+  margin: 0;
+}
+.footer-left-bottom-email.mobile > p {
+  font-size: 11pt;
+  height: 20px;
+}
+.footer-left-bottom-email.mobile > i {
+  height: 20px;
+  line-height: 22px;
+  font-size: 9pt !important;
+}
+.footer-left-bottom-phone.mobile > i {
+  height: 20px;
+  line-height: 18px;
+  font-size: 9pt !important;
+}
+.footer-bottom-left.mobile {
+  grid-template-columns: auto;
+  gap: 0;
+  width: max-content;
+  margin: 10px 0;
+}
+.footer-bottom-left.mobile > p {
+  margin: 0;
+  font-size: 8pt;
+}
+.footer-bottom-right.mobile {
+  grid-template-columns: auto;
+  width: max-content;
+  margin: 10px 0;
+  gap: 0;
+}
+.footer-bottom.mobile {
+  grid-template-columns: auto;
+  width: max-content;
+}
+.footer-bottom-right.mobile > a {
+  text-align: left;
+  width: max-content;
+  font-size: 10pt;
+  color: white;
+  height: 30px;
+  line-height: 30px;
+}
+.footer-left.mobile {
+  width: max-content;
+  display: inline-block;
+}
+.wave.mobile {
+  display: none;
+}
+.footer-bottom-right.mobile > span {
+  display: none;
 }

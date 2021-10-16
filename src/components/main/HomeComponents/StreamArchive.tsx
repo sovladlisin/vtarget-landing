@@ -23,6 +23,7 @@ const StreamArchive: React.FunctionComponent<IStreamArchiveProps> = (props) => {
 
 
     return <>
+        <h3 className={'home-h3' + mobileClass}>Обучаем бесплатно доступным языком работе с сервисом, с таргетированной рекламой, с трафиком для онлайн школ</h3>
         <div className={'streams-container' + mobileClass}>
             {stream_data.map(d => {
                 return <>
