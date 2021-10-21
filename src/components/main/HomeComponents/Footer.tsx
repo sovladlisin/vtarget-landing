@@ -31,40 +31,25 @@ const Footer: React.FunctionComponent<IFooterProps> = (props) => {
                         </p>
                         <p className={'footer-left-bottom-email' + mobileClass}>
                             <i className='far fa-envelope'></i>
-                            <p>servicepopolnenia@info.ru</p>
+                            <p>vtargete.servers@gmail.com</p>
                         </p>
                     </div>
                 </div>
 
-                {!isMobile && <>
-                    <div className={'footer-bottom' + mobileClass}>
-                        <div className={'footer-bottom-left' + mobileClass}>
-                            <p>ИП Крестинин К.И.</p>
-                            <p>ИНН 745104702135 </p>
-                            <p>ООО ‎‎«‎Социальные Технологии»‎</p>
-                        </div>
-                        <div className={'footer-bottom-right' + mobileClass}>
-                            <span></span>
-                            <a href='https://vtargete.ru/offer' target='_blank'>Оферта</a>
-                            <a href='https://vtargete.ru/policy' target='_blank'>Политика конфиденциальности</a>
-                            <a href='https://vtargete.ru/pravilo' target='_blank'>Пользовательское соглашение</a>
-                        </div>
+
+                <div className={'footer-bottom' + mobileClass}>
+                    <div className={'footer-bottom-right' + mobileClass}>
+                        <a href='https://vtargete.ru/offer' target='_blank'>Оферта</a>
+                        <a href='https://vtargete.ru/policy' target='_blank'>Политика конфиденциальности</a>
+                        <a href='https://vtargete.ru/pravilo' target='_blank'>Пользовательское соглашение</a>
                     </div>
-                </>}
-                {isMobile && <>
-                    <div className={'footer-bottom' + mobileClass}>
-                        <div className={'footer-bottom-right' + mobileClass}>
-                            <a href='https://vtargete.ru/offer' target='_blank'>Оферта</a>
-                            <a href='https://vtargete.ru/policy' target='_blank'>Политика конфиденциальности</a>
-                            <a href='https://vtargete.ru/pravilo' target='_blank'>Пользовательское соглашение</a>
-                        </div>
-                        <div className={'footer-bottom-left' + mobileClass}>
-                            <p>ИП Крестинин К.И.</p>
-                            <p>ИНН 745104702135 </p>
-                            <p>ООО ‎‎«‎Социальные Технологии»‎</p>
-                        </div>
+                    <div className={'footer-bottom-left' + mobileClass}>
+                        <p>ИП Крестинин К.И.</p>
+                        <p>ИНН 745104702135 </p>
+                        <p>ООО ‎‎«‎Социальные Технологии»‎</p>
                     </div>
-                </>}
+                </div>
+
             </div>
         </div>
     </>;
