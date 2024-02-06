@@ -39,9 +39,9 @@ const Footer: React.FunctionComponent<IFooterProps> = (props) => {
 
                 <div className={'footer-bottom' + mobileClass}>
                     <div className={'footer-bottom-right' + mobileClass}>
-                        <a href='https://vtargete.ru/offer' target='_blank'>Оферта</a>
-                        <a href='https://vtargete.ru/policy' target='_blank'>Политика конфиденциальности</a>
-                        <a href='https://vtargete.ru/pravilo' target='_blank'>Пользовательское соглашение</a>
+                        <a href='https://vtargete.ru/offer.html' target='_blank'>Оферта</a>
+                        <a href='https://vtargete.ru/policy.html' target='_blank'>Политика конфиденциальности</a>
+                        <a href='https://vtargete.ru/pravilo.html' target='_blank'>Пользовательское соглашение</a>
                     </div>
                     <div className={'footer-bottom-left' + mobileClass}>
                         <p>ИП Крестинин К.И.</p>

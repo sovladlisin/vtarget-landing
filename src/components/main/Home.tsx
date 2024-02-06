@@ -1,7 +1,4 @@
 import * as React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootStore } from '../../store';
-import { URL } from '../../utils';
 import MainLogo from '../../images/logo.png'
 import { isMobile } from 'react-device-detect'
 import { Link } from 'react-router-dom'
@@ -23,12 +20,12 @@ import SubscriptionPlans from './HomeComponents/SubscriptionPlans';
 import VtargetePayContainer from './HomeComponents/VtargetePayContainer';
 import Footer from './HomeComponents/Footer';
 import LoginPopup from '../auth/LoginPopup';
+import LoginPro from '../auth/LoginPro';
 
 export interface IAppProps {
 }
 
 const Home: React.FC = (props: IAppProps) => {
-    const dispatch = useDispatch()
     // const authState = useSelector((state: RootStore) => state.auth);
 
 
@@ -59,6 +56,7 @@ const Home: React.FC = (props: IAppProps) => {
     const scroll6 = () => scrollRef6.current.scrollIntoView({ behavior: 'smooth' })
 
     const [loginPopupWindow, setLoginPopupWindow] = useState(false)
+    const [proLoginPopupWindow, setProLoginPopupWindow] = useState(false)
     const [stopScroll, setStopScroll] = useState(false)
     React.useEffect(() => {
         const objRef = document.body
@@ -131,7 +129,7 @@ const Home: React.FC = (props: IAppProps) => {
             <BenefitDesc />
 
             <span ref={scrollRef4}></span>
-            <VtargetePayContainer />
+            <VtargetePayContainer onSubmit={() => setProLoginPopupWindow(true)} />
 
             <span ref={scrollRef1}></span>
             <h2 className={'home-h2' + mobileClass}>Все <a>возможности</a> сервиса Втаргете</h2>
@@ -162,6 +160,9 @@ const Home: React.FC = (props: IAppProps) => {
         <Footer />
 
         {loginPopupWindow && <LoginPopup onClose={() => setLoginPopupWindow(false)} />}
+        {proLoginPopupWindow && <LoginPro onClose={() => setProLoginPopupWindow(false)} />}
+
+
     </>
 }
 

@@ -85,7 +85,7 @@
   justify-items: center;
   color: white;
   margin: 0 auto;
-  max-width: 290px;
+  width: 240px;
 }
 .vtargete-pay-container-link.mobile > p {
   line-height: 40px;
@@ -136,4 +136,72 @@
 .vtargete-pay-container.mobile > div {
   width: unset;
   margin: auto 0 auto 25px;
+}
+
+.vtargete-pay-container-link {
+  background: #386BEE;
+  box-shadow: 0px 8px 16px rgba(56, 107, 238, 0.25);
+  color: white;
+  display: grid;
+  grid-template-columns: auto auto;
+  height: 50px;
+  border-radius: 50px;
+  gap: 20px;
+  padding: 0 30px;
+}
+
+.vtargete-pay-container-link > p {
+  color: white;
+  height: 50px;
+  width: max-content;
+  line-height: 50px;
+  margin: 0;
+  font-size: 11pt;
+}
+.vtargete-pay-container-link > i {
+  height: 50px;
+  line-height: 50px;
+}
+.vtargete-pay-container-button {
+  background: #386BEE;
+  box-shadow: 0px 8px 16px rgba(56, 107, 238, 0.25);
+  color: white;
+  height: 50px;
+  border-radius: 50px;
+  padding: 0 30px;
+}
+.vtargete-pay-container-button p {
+  color: white;
+  height: 50px;
+  width: max-content;
+  line-height: 50px;
+  margin: 0;
+  font-size: 11pt;
+}
+.vtargete-pay-container-links {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: 0 !important;
+  gap: 20px;
+}
+
+.vtargete-pay-container-button.mobile {
+  height: 40px;
+  background: #386BEE;
+  box-shadow: 0px 8px 16px rgba(56, 107, 238, 0.25);
+  border-radius: 75px;
+  color: white;
+  margin: 10px auto 0 auto;
+  width: 300px;
+  display: block;
+}
+.vtargete-pay-container-button.mobile > p {
+  line-height: 40px;
+  color: white;
+  float: left;
+  height: 40px;
+  margin: 0;
+  font-size: 11px;
+  text-align: center;
+  width: 100%;
 }
